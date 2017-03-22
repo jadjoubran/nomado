@@ -5,7 +5,7 @@
   "display": "standalone",
   "background_color": "#EEEEEE",
   "description": "Plain Progressive Web Apps starter",
-  "theme_color": "#03A9F4",
+  "theme_color": "#F44336",
   "scope": "/",
   "orientation": "natural",
   "icons": [{
