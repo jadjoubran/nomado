@@ -1,6 +1,6 @@
 window.addEventListener('online', function () {
     console.log('online');
-    document.head.querySelector('meta[name=theme-color]').setAttribute('content', 'F44336')
+    document.head.querySelector('meta[name=theme-color]').setAttribute('content', '#F44336')
     document.body.classList.remove('offline');
 });
 
