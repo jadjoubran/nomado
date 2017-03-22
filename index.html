@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Nomado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#03A9F4">
+  <link rel="manifest" href="manifest.json">
+
+  <!--iOS fallback -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Nomado">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!--Windows fallback-->
+  <meta name="msapplication-navbutton-color" content="#03A9F4">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="application-name" content="Nomado">
+
+  <style>
+     :root {
+      --primary: #F44336;
+    }
+    
+    body {
+      margin: 0;
+      background-color: #EEEEEE;
+      /* iOS */
+      font-family: -apple-system, BlinkMacSystemFont, RobotoRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    
+    #splash {
+      height: 100vh;
+      width: 100vw;
+      background-color: var(--primary);
+      background-image: url('images/logo.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 77px;
+      transition: opacity 700ms 400ms;
+      position: fixed;
+      top: 0;
+    }
+    
+    .hide {
+      opacity: 0;
+    }
+    
+    #shell-header {
+      height: 70px;
+      background-color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    #shell-header h1 {
+      color: white;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="shell-header">
+    <h1>Nomado</h1>
+  </div>
+
+
+  <div id="splash"></div>
+
+  <script async src="js/shell.js"></script>
+  <script async src="js/pwa.js"></script>
+
+</body>
+
+</html>

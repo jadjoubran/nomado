@@ -1,0 +1,16 @@
+{
+  "name": "Nomado",
+  "short_name": "Nomado",
+  "start_url": "index.html?homescreen=1",
+  "display": "standalone",
+  "background_color": "#EEEEEE",
+  "description": "Plain Progressive Web Apps starter",
+  "theme_color": "#03A9F4",
+  "scope": "/",
+  "orientation": "natural",
+  "icons": [{
+    "src": "images/logo.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }]
+}
