@@ -22,6 +22,7 @@
   <style>
      :root {
       --primary: #F44336;
+      --offline: #353A49; 
     }
     
     body {
@@ -35,10 +36,6 @@
       height: 100vh;
       width: 100vw;
       background-color: var(--primary);
-      background-image: url('images/logo.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 77px;
       transition: opacity 700ms 400ms;
       position: fixed;
       top: 0;
@@ -55,11 +52,15 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      transition: background-color 400ms;
     }
     
     #shell-header h1 {
       color: white;
       margin: 0;
+    }
+    body.offline #shell-header{
+      background-color: var(--offline) !important;
     }
   </style>
 </head>
