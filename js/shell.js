@@ -1,8 +1,3 @@
-var splash = document.getElementById('splash');
-if (splash) {
-    splash.classList.add('hide');
-}
-
 window.addEventListener('online', function () {
     console.log('online');
     document.head.querySelector('meta[name=theme-color]').setAttribute('content', 'F44336')
