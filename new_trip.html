@@ -20,7 +20,7 @@
   <meta name="application-name" content="Nomado">
 
   <link rel="preload" href="css/common.css" as="style" onload="this.rel='stylesheet'">
-  <link rel="preload" href="css/index.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/new-trip.css" as="style" onload="this.rel='stylesheet'">
 
   <style>
      :root {
@@ -86,20 +86,9 @@
     <h1>Nomado</h1>
   </div>
 
-  <div class="index">
-    <div>
-      <img src="images/no_trips.png" width="106" height="103" alt="No trips">
-      <h3>No trips yet</h3>
-      <p>When you start planning, your trips will live here.</p>
-    </div>
+  <div class="new-trip">
+    <input type="text" id="trip-name" placeholder="Name your trip..." autocomplete="off">
   </div>
-
-  <a href="new_trip.html" class="fab ripple">
-    <svg fill="#ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-      <path d="M0 0h24v24H0z" fill="none" />
-    </svg>
-  </a>
 
   <script async src="js/shell.js"></script>
   <script async src="js/pwa.js"></script>

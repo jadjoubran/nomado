@@ -1,0 +1,16 @@
+.new-trip{
+    text-align: center;
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+#trip-name{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 80px;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
