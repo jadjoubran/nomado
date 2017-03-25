@@ -19,21 +19,21 @@
   <meta name="msapplication-starturl" content="/">
   <meta name="application-name" content="Nomado">
 
-  <link rel="preload" href="css/common.css" as="style" onload="this.rel='stylesheet'">
-  <link rel="preload" href="css/index.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
 
   <style>
      :root {
       --primary: #F44336;
       --offline: #353A49;
     }
-    
+
     body {
       margin: 0;
       background-color: white;
       font-family: -apple-system, BlinkMacSystemFont, RobotoRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
-    
+
     #shell-header {
       height: 70px;
       background-color: var(--primary);
@@ -43,13 +43,13 @@
       text-align: center;
       transition: background-color 400ms;
     }
-    
+
     #shell-header h1 {
       color: white;
       margin: 0 0 0 10px;
       font-size: 30px;
     }
-    
+
     body.offline #shell-header {
       background-color: var(--offline);
     }

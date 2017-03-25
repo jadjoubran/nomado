@@ -3,7 +3,7 @@
     height: calc(100vh - 70px);
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
 #trip-name{
@@ -13,4 +13,5 @@
     height: 80px;
     font-size: 22px;
     letter-spacing: 1px;
+    outline: none;
 }

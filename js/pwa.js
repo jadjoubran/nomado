@@ -4,7 +4,7 @@ if ('serviceWorker' in navigator) {
     .serviceWorker
     .register('/service-worker.js')
     .then(function () {
-      //success
+      console.log('SW registered successfully');
     }).catch(function (error) {
       console.log('Could not register service worker', error);
     });
