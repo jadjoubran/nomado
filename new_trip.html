@@ -56,11 +56,13 @@
     
     #content {
       opacity: 0;
-      transition: opacity 300ms ease-out;
+      transition: opacity 300ms ease-out, transform 300ms ease-out;
+      transform: translateY(30px);
     }
     
     #content.show {
       opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
