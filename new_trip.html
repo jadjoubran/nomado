@@ -27,13 +27,13 @@
       --primary: #F44336;
       --offline: #353A49;
     }
-
+    
     body {
       margin: 0;
       background-color: white;
       font-family: -apple-system, BlinkMacSystemFont, RobotoRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
-
+    
     #shell-header {
       height: 70px;
       background-color: var(--primary);
@@ -43,15 +43,24 @@
       text-align: center;
       transition: background-color 400ms;
     }
-
+    
     #shell-header h1 {
       color: white;
       margin: 0 0 0 10px;
       font-size: 30px;
     }
-
+    
     body.offline #shell-header {
       background-color: var(--offline);
+    }
+    
+    #content {
+      opacity: 0;
+      transition: opacity 300ms ease-out;
+    }
+    
+    #content.show {
+      opacity: 1;
     }
   </style>
 </head>
@@ -86,9 +95,15 @@
     <h1>Nomado</h1>
   </div>
 
-  <div class="new-trip">
-    <input type="text" id="trip-name" placeholder="Name your trip..." autocomplete="off">
+  <div id="content" class="new-trip">
+    <input type="text" id="trip-name" autofocus placeholder="Name your trip..." autocomplete="off">
   </div>
+
+  <script>
+    setTimeout(function () {
+      document.getElementById('content').classList.add('show');
+    }, 50);
+  </script>
 
   <script async src="js/shell.js"></script>
   <script async src="js/pwa.js"></script>
