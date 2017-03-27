@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nomado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F44336">
+    <link rel="manifest" href="manifest.json">
+
+    <!--iOS fallback -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nomado">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--Windows fallback-->
+    <meta name="msapplication-navbutton-color" content="#F44336">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-starturl" content="/">
+    <meta name="application-name" content="Nomado">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/new-trip.css">
+
+    <style>
+         :root {
+            --primary: #F44336;
+            --offline: #353A49;
+        }
+        
+        body {
+            margin: 0;
+            background-color: white;
+            font-family: -apple-system, BlinkMacSystemFont, RobotoRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        
+        #shell-header {
+            height: 70px;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: background-color 400ms;
+        }
+        
+        #shell-header h1 {
+            color: white;
+            margin: 0 0 0 10px;
+            font-size: 30px;
+        }
+        
+        body.offline #shell-header {
+            background-color: var(--offline);
+        }
+        
+        #content {
+            opacity: 0;
+            transition: opacity 300ms ease-out, transform 300ms ease-out;
+            transform: translateY(30px);
+        }
+        
+        #content.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #trips{
+            width: 90%;
+            margin: 0 auto;
+        }
+        .trip{
+            background-color: whitesmoke;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="shell-header">
+        <svg width="35px" height="35px" viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Artboard</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Artboard">
+                    <rect id="Rectangle-5" fill="#FFFFFF" x="0" y="0" width="192" height="192" rx="96"></rect>
+                    <g id="parachute-copy-14" transform="translate(27.000000, 30.000000)">
+                        <g id="Layer_1">
+                            <g id="Group" transform="translate(9.175034, 7.159142)">
+                                <path d="M117.723643,38.5316352 C112.672693,35.6666417 106.648066,34.216886 100.319166,34.216886 C93.351289,34.216886 87.6613636,36.0118217 81.6367368,39.9468729 C80.1936678,39.0869969 78.642363,38.3102989 77.0133478,37.6262664 C71.8414348,35.4545515 65.8862151,34.216886 60.124559,34.216886 C52.5177069,34.216886 44.6065807,36.3570016 38.2776798,39.9468729 C32.5877544,36.0118217 26.5631275,34.216886 19.595251,34.216886 C12.6273745,34.216886 6.29847354,36.0118217 0.608548168,39.256513 C8.82394844,16.6127094 31.9487788,0.113108504 59.4855834,0.113108504 C86.3834125,0.113108504 109.508243,16.2675294 117.723643,38.5316352 Z"
+                                    id="Path" fill="#F44336"></path>
+                                <path d="M39.7584803,39.14805 C45.8163115,36.0418105 53.1001659,34.216886 60.124559,34.216886 C67.7009837,34.216886 75.6121099,36.3570016 81.6367368,39.9468729 C87.6613636,36.0118217 93.351289,34.216886 100.319166,34.216886 C106.648066,34.216886 112.672693,35.6666417 117.723643,38.5316352 C109.508243,16.2675294 86.3834125,0.113108504 59.4855834,0.113108504 C52.5769107,0.113108504 45.9459503,1.15167807 39.7584803,3.06528246 L39.7584803,39.14805 Z"
+                                    id="Combined-Shape" fill="#FF9100"></path>
+                                <path d="M79.8992537,38.9785455 C80.4936952,39.2882722 81.0734613,39.6112361 81.6367368,39.9468729 C87.6613636,36.0118217 93.351289,34.216886 100.319166,34.216886 C106.648066,34.216886 112.672693,35.6666417 117.723643,38.5316352 C111.68896,22.1773716 97.6095277,9.11973855 79.8992537,3.33995212 L79.8992537,38.9785455 Z"
+                                    id="Combined-Shape" fill="#F6BF0B"></path>
+                            </g>
+                            <path d="M68.6723202,0.0187777884 C30.6989145,0.0187777884 0,25.5897073 0,56.9044309 C0,58.5336802 0.702170963,60.0248575 1.8256445,61.0742045 L64.2907734,128.526966 C65.4704206,129.686771 66.9309362,130.542817 68.6723202,130.542817 C70.4137042,130.542817 71.8742198,129.686771 73.053867,128.526966 L135.181954,60.825675 C137.850204,58.2023075 137.34464,55.7722407 137.34464,55.4684824 C136.473948,24.7336611 105.775034,0.0187777884 68.6723202,0.0187777884 Z M68.6887425,10.3429575 C94.900109,10.3429575 117.434768,23.9861473 125.440502,42.7892614 C120.518458,40.3696359 114.647586,39.1452471 108.480206,39.1452471 C101.690158,39.1452471 96.1454454,40.661157 90.2745737,43.9844982 C84.403702,40.9526782 76.6944766,39.1452471 69.3114107,39.1452471 C61.898694,39.1452471 54.1894685,40.9526782 48.0220882,43.9844982 C42.4773761,40.661157 36.6065044,39.1452471 29.8164558,39.1452471 C23.0264073,39.1452471 16.8590269,40.661157 11.3143148,43.4014559 C19.3200489,24.2776684 41.8547078,10.3429575 68.6887425,10.3429575 L68.6887425,10.3429575 Z M12.493962,56.3140315 C16.7303248,51.6861386 23.879187,48.6201595 31.6752712,48.6201595 C36.4705985,48.6201595 40.3539311,49.7771327 44.5020363,52.2646252 L58.5938263,109.592649 L12.493962,56.3140315 L12.493962,56.3140315 Z M68.8065529,108.386868 L54.5767753,50.563797 C58.6991358,48.6723881 64.1650804,47.5615607 69.264593,47.5615607 C74.3335696,47.5615607 79.7689782,48.6423658 83.8913386,50.5337746 L68.8065529,108.386868 L68.8065529,108.386868 Z M78.6502952,109.049613 L93.690409,51.3708205 C98.0224499,48.7613276 102.049418,47.5615607 107.05262,47.5615607 C114.557423,47.5615607 121.45208,50.0810711 125.90615,54.1902727 L78.6502952,109.049613 L78.6502952,109.049613 Z"
+                                id="Shape" fill="#353A49"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+        <h1>Nomado</h1>
+    </div>
+
+    <div id="content">
+        <div id="trips"></div>
+    </div>
+
+    <script>
+        setTimeout(function () {
+            document.getElementById('content').classList.add('show');
+        }, 50);
+    </script>
+
+    <script async src="js/shell.js"></script>
+    <script async src="js/pwa.js"></script>
+    <script async src="js/trips.js"></script>
+
+</body>
+
+</html>

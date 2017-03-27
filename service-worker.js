@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["css/common.css","1f240bb1ecf633bcd2696f260fde38db"],["css/index.css","bcef429eb1dfe47d3428e8f961461a36"],["css/new-trip.css","adf5dddcd4963fe2d7839dedb028aea1"],["index.html","ae73b1ccf8ce3eac9a39655034fc72c1"],["js/shell.js","9511ba3df475984501392533755f7d65"],["new_trip.html","947823ae5813c3779ded5a3e2c606a92"]];
+var precacheConfig = [["css/common.css","1f240bb1ecf633bcd2696f260fde38db"],["css/index.css","bcef429eb1dfe47d3428e8f961461a36"],["css/new-trip.css","adf5dddcd4963fe2d7839dedb028aea1"],["index.html","bc1bbb4f46e0feeb50654b975c8a8f39"],["js/shell.js","9511ba3df475984501392533755f7d65"],["new_trip.html","e1f3af70dfc518099861faf74eb709c3"],["trips.html","f2796384fd05d2d071271d9243c287f3"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
