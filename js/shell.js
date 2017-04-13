@@ -8,7 +8,7 @@ window.addEventListener('offline', offlineMode);
 
 function offlineMode() {
     console.log('offline');
-    document.head.querySelector('meta[name=theme-color]').setAttribute('content', '#353A49')
+    document.head.querySelector('meta[name=theme-color]').setAttribute('content', '#5c606d')
     document.body.classList.add('offline');
 }
 

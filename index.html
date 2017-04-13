@@ -25,15 +25,15 @@
   <style>
      :root {
       --primary: #F44336;
-      --offline: #353A49;
+      --offline: #5c606d;
     }
-    
+
     body {
       margin: 0;
       background-color: white;
       font-family: -apple-system, BlinkMacSystemFont, RobotoRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
-    
+
     #shell-header {
       height: 70px;
       background-color: var(--primary);
@@ -43,15 +43,15 @@
       text-align: center;
       transition: background-color 400ms;
     }
-    
+
     #shell-header h1 {
       color: white;
       margin: 0 0 0 10px;
       font-size: 30px;
     }
-    
-    body.offline #shell-header {
-      background-color: var(--offline);
+
+    body.offline{
+        --primary: var(--offline);
     }
   </style>
 </head>
